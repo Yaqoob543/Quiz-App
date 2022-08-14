@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'josephin-sans';
+    src: url('/fonts/JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'josephin-sans-light';
+    src: url('/fonts/JosefinSans-Light.ttf');
+}
+
+body {
+    background-color: #e9ecef;
+    overflow: auto;
+}
+
+.navbar {
+    background-color: #16256a;
+    height: max-content;
+    width: auto !important;
+}
+
+.navbar-brand {
+    width: 75px;
+}
+
+.navbar-header {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.beta {
+    padding-top: 20px;
+}
+
+.beta p {
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    font-family: 'josephin-sans';
+}
+
+.main {
+    width: auto;
+    margin: 12px auto;
+}
+
+.heading p {
+    text-align: center;
+    font-family: 'josephin-sans-light';
+    color: #16256a;
+    font-size: 100px;
+    font-weight: 300;
+}
+
+.subHeading p {
+    font-family: 'josephin-sans-light';
+    text-align: center;
+    font-size: 60px;
+}
+
+.des p {
+    font-family: 'josephin-sans-light';
+    text-align: center;
+    font-size: 22px;
+}
+
+.signUp {
+    text-align: center;
+}
+
+.signUp button {
+    background-color: #16256a !important;
+    font-size: large;
+    border: 1px solid transparent;
+    font-family: 'josephin-sans';
+    font-weight: 500;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+}
+
+.signUp button:active {
+    background-color: #0064bd;
+    box-shadow: none;
+}
