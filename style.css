@@ -32,6 +32,8 @@ body {
 
 .beta {
     padding-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .beta p {
@@ -39,6 +41,17 @@ body {
     font-weight: 600;
     color: white;
     font-family: 'josephin-sans';
+}
+
+#logout {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 3px !important;
+    cursor: pointer;
+}
+
+#logout:hover {
+    transform: scale(1.2);
 }
 
 .main {
@@ -93,4 +106,28 @@ body {
 .signUp button:active {
     background-color: #0064bd;
     box-shadow: none;
+}
+
+.name p {
+    font-family: 'josephin-sans-light';
+    color: #16256a;
+    font-size: 50px;
+}
+
+.line hr {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.spinner-grow {
+    /* display: none; */
+    width: 450px;
+    margin: 0 auto !important;
+    height: 450px;
+    background-color: #16256a
+}
+
+.loading {
+    width: max-content;
+    margin: 0 auto;
+    display: none;
 }
