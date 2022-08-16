@@ -38,6 +38,7 @@ function login() {
     var loginEmail = document.getElementById('loginEmail').value
     var loginPass = document.getElementById('loginPass').value
     var storage = JSON.parse(localStorage.getItem('data'))
+
     if (loginEmail === storage.email) {
         if (loginPass === storage.password) {
 
@@ -58,7 +59,7 @@ function login() {
 )  */
 
 
-            location.href = '/welcome.html'; // redirect to the next page
+            location.href = '/sections/welcome.html'; // redirect to the next page
         } else {
             swal("Incorrect Password", "Please Enter the Correct Password", "error");
         }
@@ -72,6 +73,10 @@ function login() {
 
 function logout() {
     window.location.href = '/index.html'
+}
+
+function python() {
+    window.location.href = '/sections/python.html'
 }
 
 //  After login Page Functionality

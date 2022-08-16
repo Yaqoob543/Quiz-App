@@ -131,3 +131,111 @@ body {
     margin: 0 auto;
     display: none;
 }
+
+.cardAlign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 18rem !important;
+    margin: 5px;
+}
+
+.card-title {
+    font-family: 'josephin-sans';
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 25px !important;
+}
+
+.card-subtitle {
+    font-weight: 600;
+    margin-top: -10px !important;
+    font-size: 20px;
+    font-family: 'josephin-sans-light';
+    color: #16256a !important;
+}
+
+.btn2 {
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    color: #16256a;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 0% !important;
+}
+
+.btn2:active {
+    transform: translateY(4px) !important;
+    box-shadow: none !important;
+    color: #2649e6;
+}
+
+.btn2:focus,
+.btn2:hover {
+    box-shadow: none !important;
+}
+
+.btn2:hover {
+    color: #2649e6;
+}
+
+#body {
+    background-color: white;
+}
+
+#name2>small {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.accordion-body {
+    transition: linear(overflow);
+}
+
+.btn3 {
+    text-align: left;
+    font-size: large;
+    padding: 15px;
+    width: 100%;
+    height: 50% !important;
+    background-color: rgb(237, 237, 237) !important;
+    color: black;
+    border: none !important;
+    border-radius: 0% !important;
+    font-family: 'josephin-sans';
+}
+
+.btn3:active,
+.btn3:focus {
+    border: none;
+    outline: none;
+}
+
+.collapse {
+    font-family: 'josephin-sans';
+    margin-top: 30px;
+    border: 2px solid blak;
+}
+
+#table {
+    font-size: larger;
+    margin-bottom: 30px;
+}
+
+td,
+th {
+    width: 15rem;
+    height: 3rem;
+    font-family: 'josephin-sans';
+    padding-left: 10px;
+}
+
+th {
+    font-weight: bold !important;
+}
