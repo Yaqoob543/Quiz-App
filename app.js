@@ -73,7 +73,7 @@ function login() {
 
 function logout() {
     swal({
-            title: "Logout?",
+            title: "LogOut?",
             text: "Are You sure want to Logout ?",
             icon: "warning",
             buttons: true,
