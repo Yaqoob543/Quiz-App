@@ -72,11 +72,29 @@ function login() {
 }
 
 function logout() {
-    window.location.href = '/index.html'
+    swal({
+            title: "Logout?",
+            text: "Are You sure want to Logout ?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = '/index.html'
+            } else {}
+        });
+
 }
 
 function python() {
     window.location.href = '/sections/python.html'
 }
 
-//  After login Page Functionality
+function web() {
+    window.location.href = '/sections/web.html'
+}
+
+function moduleExam() {
+    window.location.href = '/sections/module.html'
+}

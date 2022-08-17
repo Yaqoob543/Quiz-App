@@ -239,3 +239,24 @@ th {
 th {
     font-weight: bold !important;
 }
+
+.continue {
+    background-color: #16256a !important;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.continue:active {
+    background-color: #06447a !important;
+    border: none;
+    outline: none;
+}
+
+.continue:focus {
+    border: none;
+    outline: none;
+}
