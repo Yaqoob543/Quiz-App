@@ -42,23 +42,6 @@ function login() {
     if (loginEmail === storage.email) {
         if (loginPass === storage.password) {
 
-            // first try for loader
-
-            // setTimeout(function() {
-            //     document.getElementById('container').style.display = 'none'
-            //     document.getElementById('loading').style.display = 'block'
-            // }, 4000)
-
-            //second try for loader
-            /*
-            window.onload(
-    setTimeout(function() {
-        document.getElementById('container').style.display = 'none'
-        document.getElementById('loading').style.display = 'block'
-    }, 4000)
-)  */
-
-
             location.href = '/sections/welcome.html'; // redirect to the next page
         } else {
             swal("Incorrect Password", "Please Enter the Correct Password", "error");
@@ -70,7 +53,7 @@ function login() {
 
 
 }
-
+//Logout Function 
 function logout() {
     swal({
             title: "LogOut?",
@@ -95,6 +78,185 @@ function web() {
     window.location.href = '/sections/web.html'
 }
 
+function jswindow() {
+    window.location.href = '/sections/jsQuiz.html'
+}
+
+
 function moduleExam() {
     window.location.href = '/sections/module.html'
+}
+
+
+var htmlCssQuiz = [{
+        que: 'What does HTML stand for?',
+        ans1: 'Hyper Text Markup Language',
+        ans2: 'How to meet Ladies',
+        ans3: 'Hyperlink and Text Markup Language',
+        ans4: 'Home Tool Markup Language',
+        anskey: 'Hyper Text Markup Language'
+    },
+    {
+        que: 'Who is Making the Web Standards?',
+        ans1: 'The World Wide Web Consortium',
+        ans2: 'Google',
+        ans3: 'Microsoft',
+        ans4: 'IBM',
+        anskey: 'The World Wide Web Consortium'
+    },
+    {
+        que: 'What is the correct HTML for referring to an external style sheet?',
+        ans1: "< link rel = 'stylesheet' type = 'text/css' href = 'mystyle.css'",
+        ans2: "< style src  'mystyle.css' >",
+        ans3: "< stylesheet > mystyle.css < /stylesheet >",
+        ans4: '< rel style.css >',
+        anskey: "< link rel = 'stylesheet' type = 'text/css' href = 'mystyle.css'"
+    }, {
+        que: 'How do you insert a comment in a CSS file?',
+        ans1: "'this is comment",
+        ans2: "//this is a comment",
+        ans3: "......this is a comment",
+        ans4: "/* this is a comment */ ",
+        anskey: "/* this is a comment */ "
+    }, {
+        que: 'What is the correct HTML Element for inserting a line Break',
+        ans1: "break",
+        ans2: '< Ib >',
+        ans3: "< break >",
+        ans4: "< br > ",
+        anskey: "< br > "
+    }, {
+        que: 'How can you make a numbered list ?',
+        ans1: '< list >',
+        ans2: '< ol >',
+        ans3: '< dl >',
+        ans4: '< ul >',
+        ans5: '< ol >'
+    }, {
+        que: 'What is the difference between HTML and CSS?',
+        ans1: 'CSS is one type of HTML',
+        ans2: 'HTML gives a webpage structure. CSS provides styling.',
+        ans3: 'There is no difference.',
+        ans4: 'CSS structures a webpage. HTML strictly provides styling.',
+        anskey: 'HTML gives a webpage structure. CSS provides styling.'
+    }, {
+        que: 'Which of the following property is used to set the text direction?',
+        ans1: 'color',
+        ans2: 'direction',
+        ans3: 'letter-spacing',
+        ans4: 'word-spacing',
+        anskey: 'direction'
+    }, {
+        que: "Which of the following property changes the color of bottom border?",
+        ans1: 'border-color',
+        ans2: 'border-width',
+        ans3: 'border-style',
+        ans4: 'border-bottom-color',
+        anskey: 'border-bottom-color'
+    }, {
+        que: "Which of the following property is used to set the width of an image border?",
+        ans1: 'border',
+        ans2: 'height',
+        ans3: 'width',
+        ans4: 'moz-opacity',
+        anskey: 'width'
+    }
+
+]
+
+//Getting DOM Elements
+var question = document.getElementById('question')
+var opt1 = document.getElementById('textOpt1')
+var opt2 = document.getElementById('textOpt2')
+var opt3 = document.getElementById('textOpt3')
+var opt4 = document.getElementById('textOpt4')
+var ans = document.getElementsByClassName('answer1')
+var btn = document.getElementById('next')
+var inp1 = document.getElementById('ans1')
+var inp2 = document.getElementById('ans2')
+var inp3 = document.getElementById('ans3')
+var inp4 = document.getElementById('ans4')
+
+//get user to the quiz window
+function htmlWindow() {
+    window.location.href = '/sections/htmlquiz.html'
+}
+
+
+var queCount = 0
+var score = 0
+
+//inserting questions dynamically
+function htmlQuiz() {
+    var getQuestion = htmlCssQuiz[queCount]
+    question.innerHTML = getQuestion.que
+    opt1.innerHTML = getQuestion.ans1
+    opt2.innerHTML = getQuestion.ans2
+    opt3.innerHTML = getQuestion.ans3
+    opt4.innerHTML = getQuestion.ans4
+    inp1.value = getQuestion.ans1
+    inp2.value = getQuestion.ans2
+    inp3.value = getQuestion.ans3
+    inp4.value = getQuestion.ans4
+        // console.log(htmlCssQuiz[queCount].que)
+}
+window.onload = htmlQuiz()
+
+function next() {
+    //Reading and checking value of selected option
+    for (var i = 0; i < ans.length; i++) {
+        if (ans[i].checked) {
+            console.log(ans[i].value)
+            if (ans[i].value === htmlCssQuiz[queCount].anskey) {
+                score++
+            }
+        }
+    }
+    console.log(score)
+    queCount++
+    //Next Question
+    if (queCount < htmlCssQuiz.length) {
+        htmlQuiz()
+        deSelect()
+
+    } else {
+        //Showing Result with Score
+        document.getElementById('quizWindow').style.display = 'none'
+        document.getElementById('resultWindow').style.display = 'block'
+        var totalQue = document.getElementById('totalQue')
+        var correctQue = document.getElementById('correctQue')
+        totalQue.innerText = htmlCssQuiz.length
+        correctQue.innerText = score
+        var per = document.getElementById('per')
+        var CalculatePer = (score / htmlCssQuiz.length) * 100
+        per.innerText = Math.round(CalculatePer) + "%"
+
+        //Conditions of Result display as per score
+        if (CalculatePer < 70) {
+            var msg = document.getElementById('result')
+            var dial = document.getElementById('dial')
+            msg.innerText = 'Better Luck Next Time ! You Failed'
+            msg.style.color = 'red'
+            dial.style.borderColor = 'red'
+            CalculatePer.style.color = 'red'
+        } else {
+            var msg = document.getElementById('result')
+            var dial = document.getElementById('dial')
+            msg.innerText = 'Congratulations ! You Passed'
+            msg.style.color = 'green'
+            dial.style.borderColor = 'green'
+            CalculatePer.style.color = 'green !important'
+        }
+    }
+}
+//Deselect next radio
+function deSelect() {
+    for (var i = 0; i < ans.length; i++) {
+        ans[i].checked = false
+    }
+}
+
+//return to home from result
+function back() {
+    window.location.href = '/sections/welcome.html'
 }

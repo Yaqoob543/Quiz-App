@@ -21,6 +21,7 @@ body {
 
 .navbar-brand {
     width: 75px;
+    cursor: pointer;
 }
 
 .navbar-header {
@@ -171,7 +172,7 @@ body {
 }
 
 .btn2:active {
-    transform: translateY(4px) !important;
+    transform: translateY(2px) !important;
     box-shadow: none !important;
     color: #2649e6;
 }
@@ -259,4 +260,71 @@ th {
 .continue:focus {
     border: none;
     outline: none;
+}
+
+li {
+    list-style-type: none;
+    background-color: rgba(238, 235, 235, 0.3);
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: large;
+    font-family: 'josephin-sans';
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#question {
+    font-family: 'josephin-sans';
+    font-size: 28px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: rgba(229, 229, 229, 0.8);
+    padding: 10px;
+    font-weight: 500;
+    border: 2px solid rgb(167, 167, 167);
+}
+
+#resultWindow {
+    display: none;
+}
+
+.result {
+    width: max-content;
+    height: max-content;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.result p {
+    font-size: 35px;
+}
+
+.resultAns,
+.correctAns {
+    display: flex;
+    flex-direction: row;
+    font-size: large !important;
+    justify-content: space-between;
+    font-family: 'josephin-sans';
+    color: #16256a;
+    font-weight: 600;
+}
+
+.dial {
+    margin: 0 auto;
+    border: 2px solid black;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.dial p {
+    margin-top: 20%;
+    font-size: xx-large;
+}
+
+.backHome {
+    text-align: center;
 }
