@@ -47,7 +47,7 @@ var javaScript = [{
         anskey: '0.799999999'
     },
     {
-        que: 'Extract piece of "program" of the text store in variable below \n var text = "metaprogramming"',
+        que: 'Extract piece of "program" of the text store in variable \nvar text = "metaprogramming"',
         ans1: 'text.chunk(4,7)',
         ans2: 'text.slice(4,7)',
         ans3: 'text.slice(4,11)',
@@ -55,7 +55,68 @@ var javaScript = [{
         anskey: 'text.slice(4,11)'
     },
     {
-
+        que: '3 > 2 > 1 === false;',
+        ans1: 'true',
+        ans2: 'false',
+        ans3: 'Syntax error',
+        ans4: 'None of above',
+        anskey: 'false'
+    },
+    {
+        que: 'How do you find the minimum of x and y using JavaScript?',
+        ans1: 'min(x,y);',
+        ans2: 'Math.min(x,y)',
+        ans3: 'Math.min(xy)',
+        ans4: 'min(xy)',
+        anskey: 'Math.min(x,y)'
+    },
+    {
+        que: 'Which are the correct “if” statements to execute certain code if “x” is equal to 2?',
+        ans1: 'if (x = 2)',
+        ans2: 'if (x 2)',
+        ans3: 'if (x != 2)',
+        ans4: 'if (x == 2 )',
+        anskey: 'if (x == 2 )'
+    },
+    {
+        que: 'What will the code return?  Boolean(3 < 7)',
+        ans1: 'true',
+        ans2: 'false',
+        ans3: 'NaN',
+        ans4: 'SyntaxError',
+        anskey: 'true'
+    },
+    {
+        que: 'Which of the following is not a javascript object',
+        ans1: 'var obj = {}',
+        ans2: 'var obj = { name : "Steve" }',
+        ans3: 'var obj = { name = "Steve" }',
+        ans4: 'var obj = new Object();',
+        anskey: 'var obj = { name = "Steve" }'
+    },
+    {
+        que: 'What will ( 1 == 1 ) return ?',
+        ans1: 'True',
+        ans2: 'False',
+        ans3: '0',
+        ans4: '1',
+        anskey: 'True'
+    },
+    {
+        que: 'How to handle error in Javascript',
+        ans1: 'By writing error proof code',
+        ans2: 'By using eval() function',
+        ans3: 'By using if-else block',
+        ans4: 'By using try,catch & finally block',
+        anskey: 'By using try,catch & finally block'
+    },
+    {
+        que: 'If the node is a text node , the nodeType property will return ',
+        ans1: '8',
+        ans2: '2',
+        ans3: '1',
+        ans4: '3',
+        anskey: '3'
     }
 
 ]
