@@ -111,60 +111,105 @@ var htmlCssQuiz = [{
         ans3: "< stylesheet > mystyle.css < /stylesheet >",
         ans4: '< rel style.css >',
         anskey: "< link rel = 'stylesheet' type = 'text/css' href = 'mystyle.css'"
-    }, {
+    },
+    {
         que: 'How do you insert a comment in a CSS file?',
         ans1: "'this is comment",
         ans2: "//this is a comment",
         ans3: "......this is a comment",
         ans4: "/* this is a comment */ ",
         anskey: "/* this is a comment */ "
-    }, {
+    },
+    {
         que: 'What is the correct HTML Element for inserting a line Break',
         ans1: "break",
         ans2: '< Ib >',
         ans3: "< break >",
         ans4: "< br > ",
         anskey: "< br > "
-    }, {
+    },
+    {
         que: 'How can you make a numbered list ?',
         ans1: '< list >',
         ans2: '< ol >',
         ans3: '< dl >',
         ans4: '< ul >',
         ans5: '< ol >'
-    }, {
+    },
+    {
         que: 'What is the difference between HTML and CSS?',
         ans1: 'CSS is one type of HTML',
         ans2: 'HTML gives a webpage structure. CSS provides styling.',
         ans3: 'There is no difference.',
         ans4: 'CSS structures a webpage. HTML strictly provides styling.',
         anskey: 'HTML gives a webpage structure. CSS provides styling.'
-    }, {
+    },
+    {
         que: 'Which of the following property is used to set the text direction?',
         ans1: 'color',
         ans2: 'direction',
         ans3: 'letter-spacing',
         ans4: 'word-spacing',
         anskey: 'direction'
-    }, {
+    },
+    {
         que: "Which of the following property changes the color of bottom border?",
         ans1: 'border-color',
         ans2: 'border-width',
         ans3: 'border-style',
         ans4: 'border-bottom-color',
         anskey: 'border-bottom-color'
-    }, {
+    },
+    {
         que: "Which of the following property is used to set the width of an image border?",
         ans1: 'border',
         ans2: 'height',
         ans3: 'width',
         ans4: 'moz-opacity',
         anskey: 'width'
+    },
+    {
+        que: 'What is the function of a title tag?',
+        ans1: 'stores webpage title for browser and search engine results',
+        ans2: 'show server how to index the website',
+        ans3: 'shows meta information about the title',
+        ans4: 'shows server how to title the website',
+        anskey: 'stores webpage title for browser and search engine results'
+    },
+    {
+        que: 'How to resize a background image using CSS3?',
+        ans1: 'bg-dimensions: 80px 60px;',
+        ans2: 'background-size: 80px 60px;',
+        ans3: 'background-proportion: 80px 60px;',
+        ans4: 'alpha-effect: bg-resize 80px 60px;',
+        anskey: 'background-size: 80px 60px;'
+    },
+    {
+        que: 'What is used to signify a closing tag?',
+        ans1: ':',
+        ans2: '/',
+        ans3: '*',
+        ans4: '$',
+        anskey: '/'
+    },
+    {
+        que: 'Which tag makes bold text ?',
+        ans1: '<bold>',
+        ans2: '<strong>',
+        ans3: '<bigtext>',
+        ans4: '<big>',
+        anskey: '<strong>'
+    },
+    {
+        que: 'What does CSS Stand for',
+        ans1: 'Creative Style Sheets',
+        ans2: 'Computer Style Spread',
+        ans3: 'Colorful Style Spread',
+        ans4: 'Cascading Style Sheets'
     }
-
 ]
 
-//Getting DOM Elements
+
 var question = document.getElementById('question')
 var opt1 = document.getElementById('textOpt1')
 var opt2 = document.getElementById('textOpt2')
@@ -177,16 +222,15 @@ var inp2 = document.getElementById('ans2')
 var inp3 = document.getElementById('ans3')
 var inp4 = document.getElementById('ans4')
 
-//get user to the quiz window
+
 function htmlWindow() {
     window.location.href = '/sections/htmlquiz.html'
 }
 
-
 var queCount = 0
 var score = 0
 
-//inserting questions dynamically
+
 function htmlQuiz() {
     var getQuestion = htmlCssQuiz[queCount]
     question.innerHTML = getQuestion.que
@@ -198,7 +242,6 @@ function htmlQuiz() {
     inp2.value = getQuestion.ans2
     inp3.value = getQuestion.ans3
     inp4.value = getQuestion.ans4
-        // console.log(htmlCssQuiz[queCount].que)
 }
 window.onload = htmlQuiz()
 
