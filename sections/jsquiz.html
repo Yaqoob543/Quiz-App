@@ -18,13 +18,19 @@
                 <div class="navbar-header">
                     <img onclick="back()" class="navbar-brand" src="/assests/logo.png" alt="">
                     <div class="beta">
+                        <button onclick="scores()" class="button-30" role="button">Results</button>
                         <p id="name"></p>
                         <p><i title="LogOut" onclick="logout()" id="logout" class="fa-solid fa-right-from-bracket"></i></p>
                     </div>
                 </div>
+
             </div>
         </nav>
         <br><br>
+
+        <div id="loader">
+            <img src="/assests/loader2.gif" alt="">
+        </div>
 
         <div class="container" id="quizWindow">
 
@@ -38,7 +44,12 @@
 
                 <button class="continue" onclick="next()" id="next ">Next</button>
             </div>
+
         </div>
+
+
+
+
 
         <!--Result Window-->
         <div class="container" id="resultWindow">

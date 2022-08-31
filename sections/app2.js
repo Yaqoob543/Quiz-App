@@ -118,7 +118,6 @@ var javaScript = [{
         ans4: '3',
         anskey: '3'
     }
-
 ]
 
 var question = document.getElementById('question')
@@ -191,6 +190,7 @@ function next() {
         var CalculatePer = (score / javaScript.length) * 100
         per.innerText = Math.round(CalculatePer) + "%"
 
+
         //Conditions of Result display as per score
         if (CalculatePer < 70) {
             var msg = document.getElementById('result')
@@ -198,14 +198,12 @@ function next() {
             msg.innerText = 'Better Luck Next Time ! You Failed'
             msg.style.color = 'red'
             dial.style.borderColor = 'red'
-            CalculatePer.style.color = 'red'
         } else {
             var msg = document.getElementById('result')
             var dial = document.getElementById('dial')
             msg.innerText = 'Congratulations ! You Passed'
             msg.style.color = 'green'
             dial.style.borderColor = 'green'
-            CalculatePer.style.color = 'green !important'
         }
     }
 }

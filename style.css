@@ -38,10 +38,11 @@ body {
 }
 
 .beta p {
-    font-size: large;
+    font-size: x-large;
     font-weight: 600;
     color: white;
     font-family: 'josephin-sans';
+    margin-top: -2px;
 }
 
 #logout {
@@ -326,5 +327,71 @@ li {
 }
 
 .backHome {
+    text-align: center;
+}
+
+#resultSection {
+    color: black;
+    background-color: white;
+    width: max-content;
+    font-size: large;
+    padding: 3px;
+    height: max-content;
+    font-family: 'josephin-sans';
+    margin-right: 30px;
+}
+
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'josephin-sans';
+    height: max-content;
+    justify-content: flex-start;
+    margin-right: 30px;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 22px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-1px);
+    border: none;
+    outline: none;
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(1px);
+    border: none;
+    outline: none;
+}
+
+#resultTable th,
+td {
+    width: 600px !important;
     text-align: center;
 }
